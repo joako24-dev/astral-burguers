@@ -460,8 +460,9 @@ right:5%;
 }
 
 .catalogo{
-grid-template-columns:1fr;
+grid-template-columns:repeat(2,1fr);
 }
+
 
 .card img{
 height:180px;
