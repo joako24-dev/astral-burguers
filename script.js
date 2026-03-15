@@ -1,9 +1,9 @@
 const hamburguesas = [
-{nombre:"Cheesse burguer",precio:8000,ingredientes:"2 medallones de carne, cheddar",imagen:"img/burga1.jpg"},
-{nombre:"Bacon cheesse",precio:8500,ingredientes:"2 medallones de carne, cheddar, bacon",imagen:"img/burga2.jpg"},
-{nombre:"Cuarto extreme",precio:9000,ingredientes:"2 medallones de carne, cheddar, bacon, salsa cuarto",imagen:"img/burga3.jpg"},
-{nombre:"Cuarto caramel",precio:9500,ingredientes:"2 medallones de carne, cheddar, bacon, cebolla caramelizada,salsa cuato",imagen:"img/burga2.jpg"},
-{nombre:"Caramel burguer",precio:8500,ingredientes:"2 medallones de carne, cheddar, bacon, cebolla caramelizada",imagen:"img/burga2.jpg"},
+{nombre:"Cheesse burguer",precio:8000,ingredientes:"2 medallones de carne, cheddar",imagen:"img/cheesseburguer.jpeg"},
+{nombre:"Bacon cheesse",precio:8500,ingredientes:"2 medallones de carne, cheddar, bacon",imagen:"img/baconcheese.jpeg"},
+{nombre:"Cuarto extreme",precio:9000,ingredientes:"2 medallones de carne, cheddar, bacon, salsa cuarto",imagen:"img/cuartoextreme.jpeg"},
+{nombre:"Cuarto caramel",precio:9500,ingredientes:"2 medallones de carne, cheddar, bacon, cebolla caramelizada,salsa cuato",imagen:"img/cuartocaramel.jpeg"},
+{nombre:"Caramel burguer",precio:8500,ingredientes:"2 medallones de carne, cheddar, bacon, cebolla caramelizada",imagen:"img/caramelburguer.jpeg"},
 
 ]
 
