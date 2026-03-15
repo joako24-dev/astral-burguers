@@ -49,7 +49,7 @@ div.innerHTML += `
 📋 Ver ingredientes
 </button>
 
-<button class="agregar" onclick="agregarCarrito('${item.nombre}',${item.precio})">
+<button class="agregar" onclick="agregarCarrito('${item.nombre}',${item.precio},'${item.imagen}')">
 Agregar
 </button>
 
@@ -72,7 +72,7 @@ crearCatalogo(bebidas,"bebida")
 crearCatalogo(promos,"promo")
 
 
-function agregarCarrito(nombre,precio){
+function agregarCarrito(nombre,precio,imagen){
 
 if(carrito[nombre]){
 
@@ -86,6 +86,9 @@ carrito[nombre]={precio:precio,cantidad:1}
 
 actualizarCarrito()
 
+animarAlCarrito(imagen)
+
+
 const boton=document.querySelector(".botonCarrito")
 
 boton.classList.add("animacion-carrito")
@@ -94,6 +97,39 @@ setTimeout(()=>{
 boton.classList.remove("animacion-carrito")
 },400)
 
+
+}
+function animarAlCarrito(imagen){
+
+const img = document.createElement("img")
+
+img.src = imagen
+
+img.classList.add("fly")
+
+document.body.appendChild(img)
+
+const carritoIcon = document.querySelector(".botonCarrito")
+
+const rectCarrito = carritoIcon.getBoundingClientRect()
+
+img.style.left = "50%"
+img.style.top = "50%"
+
+setTimeout(()=>{
+
+img.style.left = rectCarrito.left + "px"
+img.style.top = rectCarrito.top + "px"
+img.style.width = "20px"
+img.style.opacity = "0"
+
+},50)
+
+setTimeout(()=>{
+
+img.remove()
+
+},800)
 
 }
 
@@ -211,6 +247,28 @@ entry.target.classList.add("visible")
 document.querySelectorAll(".card").forEach(card=>{
 
 observer.observe(card)
+
+})
+function toggleMenu(){
+
+const menu=document.getElementById("menuNav")
+
+menu.classList.toggle("activo")
+
+}
+window.addEventListener("scroll", ()=>{
+
+const navbar = document.querySelector(".navbar")
+
+if(window.scrollY > 50){
+
+navbar.classList.add("scroll")
+
+}else{
+
+navbar.classList.remove("scroll")
+
+}
 
 })
 

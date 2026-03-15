@@ -52,7 +52,17 @@ background:black;
 border-bottom:2px solid #e63946;
 z-index:1000;
 }
+/* NAVBAR SCROLL */
 
+.navbar.scroll{
+
+background:#000;
+
+box-shadow:0 5px 15px rgba(0,0,0,0.5);
+
+border-bottom:2px solid #e63946;
+
+}
 .menuNav{
 display:flex;
 gap:30px;
@@ -68,6 +78,20 @@ transition:0.2s;
 
 .menuNav a:hover{
 color:#e63946;
+}
+
+.fly{
+
+position:fixed;
+
+width:80px;
+
+z-index:2000;
+
+pointer-events:none;
+
+transition:all 0.8s ease;
+
 }
 
 .hero{
@@ -478,6 +502,47 @@ height:220px;
 }
 
 }
+/* MENU HAMBURGUESA */
 
+.menuToggle{
+display:none;
+font-size:30px;
+color:white;
+cursor:pointer;
+}
+
+/* CELULAR */
+
+@media (max-width:768px){
+
+.menuToggle{
+display:block;
+}
+
+.menuNav{
+position:absolute;
+top:70px;
+left:0;
+width:100%;
+background:black;
+
+flex-direction:column;
+align-items:center;
+gap:20px;
+padding:20px 0;
+
+/* animacion */
+
+transform:translateY(-120%);
+transition:transform 0.4s ease;
+
+display:flex;
+}
+
+.menuNav.activo{
+transform:translateY(0);
+}
+
+}
 
 
