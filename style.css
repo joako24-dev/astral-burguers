@@ -73,7 +73,7 @@ color:#e63946;
 .hero{
 position:relative;
 height:100vh;
-
+padding:120px 20px;
 display:flex;
 align-items:center;
 justify-content:center;
@@ -436,37 +436,48 @@ opacity:0.1;
 
 @media (max-width:768px){
 
-.navbar{
-padding:15px;
-flex-direction:column;
-gap:10px;
+.logo{
+font-size:28px;
 }
 
-.menuNav{
-gap:15px;
-}
-
-.tituloHero{
-font-size:40px;
-}
-
-.subtituloHero{
+.menuNav a{
 font-size:18px;
 }
 
-.heroBurger{
-width:180px;
-right:5%;
+.tituloHero{
+font-size:45px;
+}
+
+.subtituloHero{
+font-size:20px;
+}
+
+.btnHero{
+font-size:18px;
+padding:15px 30px;
+}
+
+.card{
+padding:25px;
+}
+
+.card h3{
+font-size:20px;
+}
+
+.precio{
+font-size:22px;
 }
 
 .catalogo{
-grid-template-columns:repeat(2,1fr);
+grid-template-columns:1fr;
 }
-
 
 .card img{
-height:180px;
+height:220px;
 }
 
 }
+
+
 
