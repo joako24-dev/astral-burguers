@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Astral Burgers</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<nav class="navbar">
+
+    <div class="logo">
+    ASTRAL <span>BURGERS</span>
+    </div>
+
+    <ul class="menuNav">
+
+        <li><a href="#hamburguesas">Hamburguesas</a></li>
+        <li><a href="#bebidas">bebidas</a></li>
+        <li><a href="#promos">Promos</a></li>
+
+    </ul>
+
+</nav>
+
+<section class="hero">
+
+    <div class="heroContenido">
+
+        <h1 class="tituloHero">
+        Astral Burgers
+        </h1>
+
+        <p class="subtituloHero">
+        Las mejores hamburguesas del universo
+        </p>
+
+        <a href="#hamburguesas" class="btnHero">
+        Ver menú
+        </a>
+
+    </div>
+
+    <img src="img/hamburguesa.png" class="heroBurger">
+
+</section>
+
+
+<header>
+
+<div class="logo">
+🍔 ASTRAL <span>BURGERS</span>
+</div>
+
+</header>
+
+
+<section class="sobre">
+
+<h2>Sobre Nosotros</h2>
+
+<p>
+En Astral Burgers llevamos las hamburguesas a otro nivel con ingredientes
+frescos y combinaciones únicas.
+</p>
+
+</section>
+
+
+<!-- HAMBURGUESAS -->
+
+<section class="menu" id="hamburguesas">
+
+<h2>HAMBURGUESAS</h2>
+
+<div class="catalogo" id="catalogo"></div>
+
+</section>
+
+
+<!-- promos -->
+<section class="menu" id="promos">
+
+
+<h2>PROMOCIONES</h2>
+
+<div class="catalogo" id="promo"></div>
+
+</section>
+
+
+<!-- bebidas -->
+
+<section class="menu" id="bebidas">
+
+<h2>BEBIDAS</h2>
+
+<div class="catalogo" id="bebida"></div>
+
+</section>
+
+
+<!-- BOTON CARRITO -->
+
+<div class="botonCarrito" onclick="abrirCarrito()">
+
+🛒
+
+<span id="contador">0</span>
+
+</div>
+
+
+<!-- MODAL CARRITO -->
+
+<div class="modal" id="modalCarrito">
+
+<div class="modal-content">
+
+<h2>Tu Pedido</h2>
+
+<ul id="listaCarrito"></ul>
+
+<div class="total">
+Total: $<span id="total">0</span>
+</div>
+
+<button class="vaciar" onclick="vaciarCarrito()">
+Vaciar carrito
+</button>
+
+<button class="comprar" onclick="enviarPedido()">
+Finalizar pedido
+</button>
+
+<button class="cerrar" onclick="cerrarCarrito()">
+Cerrar
+</button>
+
+</div>
+
+</div>
+
+
+<!-- MODAL INGREDIENTES -->
+
+<div class="modal" id="modalIngredientes">
+
+<div class="modal-content">
+
+<h3 id="modalTitulo"></h3>
+
+<p id="modalTexto"></p>
+
+<img id="modalImagen">
+
+
+<button class="cerrar" onclick="cerrarIngredientes()">
+Cerrar
+</button>
+
+</div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
