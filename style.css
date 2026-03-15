@@ -432,4 +432,40 @@ background-size:40px 40px;
 opacity:0.1;
 
 }
+/* RESPONSIVE CELULAR */
+
+@media (max-width:768px){
+
+.navbar{
+padding:15px;
+flex-direction:column;
+gap:10px;
+}
+
+.menuNav{
+gap:15px;
+}
+
+.tituloHero{
+font-size:40px;
+}
+
+.subtituloHero{
+font-size:18px;
+}
+
+.heroBurger{
+width:180px;
+right:5%;
+}
+
+.catalogo{
+grid-template-columns:1fr;
+}
+
+.card img{
+height:180px;
+}
+
+}
 
