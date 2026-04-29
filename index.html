@@ -1,175 +1,342 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Astral Burgers</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+  <meta name="theme-color" content="#0a0908">
+  <meta name="description" content="Astral Burgers — Las mejores hamburguesas del universo. Delivery en zona norte de Buenos Aires. Pedí por WhatsApp.">
+
+  <title>Astral Burgers · The Best in the Universe</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Pacifico&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<nav class="navbar">
-
-    <div class="logo">
-    ASTRAL <span>BURGERS</span>
+  <!-- ==================== MARQUEE TOP ==================== -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>★ DELIVERY EN MOTO ★ HECHO AL MOMENTO ★ 100% CARNE PREMIUM ★ PEDÍ POR WHATSAPP ★ THE BEST IN THE UNIVERSE ★</span>
+      <span>★ DELIVERY EN MOTO ★ HECHO AL MOMENTO ★ 100% CARNE PREMIUM ★ PEDÍ POR WHATSAPP ★ THE BEST IN THE UNIVERSE ★</span>
     </div>
+  </div>
 
-    <div class="menuToggle" onclick="toggleMenu()">
-    ☰
-    </div>
+  <!-- ==================== NAVBAR ==================== -->
+  <header class="navbar" id="navbar">
+    <a href="#hero" class="logo">
+      <span class="logo-script">Astral</span>
+      <span class="logo-block">BURGERS</span>
+    </a>
 
-    <ul class="menuNav" id="menuNav">
+    <nav class="nav-links" aria-label="Navegación principal">
+      <a href="#hamburguesas">Hamburguesas</a>
+      <a href="#combos">Combos</a>
+      <a href="#bebidas">Bebidas</a>
+      <a href="#delivery">Delivery</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
 
-        <li><a href="#hamburguesas">Hamburguesas</a></li>
-        <li><a href="#bebidas">bebidas</a></li>
-        <li><a href="#promos">Promos</a></li>
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
 
-    </ul>
+  <!-- Mobile drawer -->
+  <nav class="drawer" id="drawer" aria-hidden="true">
+    <a href="#hamburguesas">Hamburguesas</a>
+    <a href="#combos">Combos</a>
+    <a href="#bebidas">Bebidas</a>
+    <a href="#delivery">Delivery</a>
+    <a href="#instagram">Instagram</a>
+    <a href="#contacto">Contacto</a>
+    <a href="#" class="drawer-cta" id="drawerWhatsapp">📱 Pedí por WhatsApp</a>
+  </nav>
 
-</nav>
-
-<section class="hero">
-
-    <div class="heroContenido">
-
-        <h1 class="tituloHero">
-        Astral Burgers
+  <!-- ==================== HERO ==================== -->
+  <section class="hero" id="hero">
+    <div class="stars" aria-hidden="true"></div>
+    <div class="hero-grid">
+      <div class="hero-text">
+        <p class="eyebrow">★ Buenos Aires · Delivery ★</p>
+        <h1 class="hero-title">
+          <span class="hero-title-block">ASTRAL</span>
+          <span class="hero-title-script">burgers</span>
         </h1>
+        <p class="hero-subtitle">Las mejores hamburguesas <em>del universo</em>.</p>
+        <div class="hero-ctas">
+          <a href="#combos" class="btn btn-primary">Pedí ahora</a>
+          <a href="#hamburguesas" class="btn btn-ghost">Ver menú →</a>
+        </div>
+        <div class="hero-meta">
+          <span>★ Hecho al momento</span>
+          <span>★ Carne premium</span>
+          <span>★ Llega caliente</span>
+        </div>
+      </div>
 
-        <p class="subtituloHero">
-        Las mejores hamburguesas del universo
-        </p>
+      <div class="hero-visual">
+        <div class="hero-burger-glow" aria-hidden="true"></div>
+        <img src="img/hamburguesa.png" alt="Hamburguesa Astral" class="hero-burger" onerror="this.style.display='none'">
+        <div class="hero-fallback" aria-hidden="true">🍔</div>
+        <div class="hero-orbit" aria-hidden="true"></div>
+      </div>
+    </div>
+    <a href="#hamburguesas" class="hero-scroll" aria-label="Scroll abajo">scroll ↓</a>
+  </section>
 
-        <a href="#hamburguesas" class="btnHero">
-        Ver menú
+  <!-- ==================== HIGHLIGHTS ==================== -->
+  <section class="highlights">
+    <div class="highlight">
+      <span class="highlight-num">01</span>
+      <h3>CARNE PREMIUM</h3>
+      <p>Medallones frescos, nada de congelado.</p>
+    </div>
+    <div class="highlight">
+      <span class="highlight-num">02</span>
+      <h3>HECHO AL MOMENTO</h3>
+      <p>Recién hecha. Como debe ser.</p>
+    </div>
+    <div class="highlight">
+      <span class="highlight-num">03</span>
+      <h3>DELIVERY RÁPIDO</h3>
+      <p>Llega caliente, llega volando.</p>
+    </div>
+  </section>
+
+  <!-- ==================== HAMBURGUESAS ==================== -->
+  <section class="section" id="hamburguesas">
+    <header class="section-head">
+      <p class="eyebrow">★ El menú ★</p>
+      <h2 class="section-title">HAMBURGUESAS</h2>
+      <p class="section-script">our classics</p>
+    </header>
+    <div class="grid" id="grid-hamburguesas"></div>
+  </section>
+
+  <!-- ==================== COMBOS (cosmic) ==================== -->
+  <section class="section section-dark" id="combos">
+    <div class="stars stars-faint" aria-hidden="true"></div>
+    <header class="section-head">
+      <p class="eyebrow">★ Más pedidos ★</p>
+      <h2 class="section-title">COMBOS</h2>
+      <p class="section-script">the cosmic deals</p>
+    </header>
+    <div class="grid grid-combos" id="grid-combos"></div>
+  </section>
+
+  <!-- ==================== BEBIDAS ==================== -->
+  <section class="section" id="bebidas">
+    <header class="section-head">
+      <p class="eyebrow">★ Para acompañar ★</p>
+      <h2 class="section-title">BEBIDAS</h2>
+      <p class="section-script">drinks</p>
+    </header>
+    <div class="grid grid-drinks" id="grid-bebidas"></div>
+  </section>
+
+  <!-- ==================== DELIVERY ==================== -->
+  <section class="delivery" id="delivery">
+    <div class="delivery-content">
+      <p class="eyebrow">★ Llegamos a vos ★</p>
+      <h2 class="section-title">ZONA DE<br>DELIVERY</h2>
+      <p class="section-script">we deliver</p>
+      <p class="delivery-text">
+        Hacemos delivery en moto a toda la zona. Tiempo estimado de entrega: <strong>30 a 45 minutos</strong>.
+      </p>
+      <ul class="zones" id="zones"></ul>
+      <p class="delivery-note">
+        ¿No estás seguro si llegamos a tu zona?
+        <a href="#" id="deliveryWhatsappLink" target="_blank" rel="noopener">Consultanos por WhatsApp →</a>
+      </p>
+    </div>
+    <div class="delivery-visual">
+      <div class="delivery-card">
+        <div class="delivery-icon">🛵</div>
+        <h3>30-45 MIN</h3>
+        <p>Tiempo promedio de entrega</p>
+      </div>
+      <div class="delivery-card">
+        <div class="delivery-icon">📍</div>
+        <h3>ZONA NOROESTE</h3>
+        <p>GBA Noroeste y alrededores</p>
+      </div>
+      <div class="delivery-card">
+        <div class="delivery-icon">💵</div>
+        <h3>EFECTIVO O TRANSFER</h3>
+        <p>Te coordinamos por WhatsApp</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== INSTAGRAM ==================== -->
+  <section class="instagram" id="instagram">
+    <header class="section-head">
+      <p class="eyebrow">★ Seguinos ★</p>
+      <h2 class="section-title">INSTAGRAM</h2>
+      <p class="section-script" id="igHandle">@astral.burgers</p>
+    </header>
+
+    <div class="ig-grid" id="igGrid"></div>
+
+    <a href="#" class="btn btn-primary" id="igCta" target="_blank" rel="noopener">Seguir en Instagram</a>
+  </section>
+
+  <!-- ==================== CONTACTO ==================== -->
+  <section class="contact" id="contacto">
+    <header class="section-head">
+      <p class="eyebrow">★ Hablemos ★</p>
+      <h2 class="section-title">CONTACTO</h2>
+      <p class="section-script">say hi</p>
+    </header>
+
+    <div class="contact-grid">
+      <a href="#" class="contact-card" id="contactWhatsapp" target="_blank" rel="noopener">
+        <span class="contact-icon">💬</span>
+        <h3>WhatsApp</h3>
+        <p id="contactPhone">+54 9 11 6933-2249</p>
+      </a>
+      <div class="contact-card">
+        <span class="contact-icon">⏰</span>
+        <h3>Horarios</h3>
+        <p id="contactHours">Viernes a Domingo · 20:00 a 00:00</p>
+      </div>
+      <a href="#" class="contact-card" id="contactInstagram" target="_blank" rel="noopener">
+        <span class="contact-icon">📷</span>
+        <h3>Instagram</h3>
+        <p id="contactIg">@astral.burgers</p>
+      </a>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="stars stars-faint" aria-hidden="true"></div>
+
+    <!-- Brand top -->
+    <div class="footer-brand-bar">
+      <div class="logo logo-large">
+        <span class="logo-script">Astral</span>
+        <span class="logo-block">BURGERS</span>
+      </div>
+      <p class="footer-tagline">Las mejores hamburguesas del universo.<br>Hecho al momento. Llegamos a vos.</p>
+      <p class="footer-tag-script">★ The best in the universe ★</p>
+    </div>
+
+    <!-- Main grid -->
+    <div class="footer-main">
+
+      <div class="footer-col">
+        <h4 class="footer-col-title">Menú</h4>
+        <a href="#hamburguesas">Hamburguesas</a>
+        <a href="#combos">Combos</a>
+        <a href="#bebidas">Bebidas</a>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-col-title">Navegación</h4>
+        <a href="#hero">Inicio</a>
+        <a href="#delivery">Delivery</a>
+        <a href="#instagram">Instagram</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-col-title">Contacto</h4>
+        <a href="#" id="footerWhatsapp" target="_blank" rel="noopener">💬 WhatsApp</a>
+        <a href="#" id="footerInstagram" target="_blank" rel="noopener">📷 <span id="footerIgHandle">@astral.burgers</span></a>
+        <p class="footer-info">⏰ <span id="footerHours">Vie a Dom · 20:00–00:00</span></p>
+        <p class="footer-info">📍 GBA Noroeste</p>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-col-title">Zonas de envío</h4>
+        <ul class="footer-zones" id="footerZones"></ul>
+        <a href="#" id="footerDeliveryWsp" class="footer-delivery-btn" target="_blank" rel="noopener">
+          🛵 Pedir delivery
         </a>
+      </div>
 
     </div>
 
-    <img src="img/hamburguesa.png" class="heroBurger">
+    <!-- Bottom bar -->
+    <div class="footer-bottom">
+      <p class="footer-meta">© <span id="year"></span> Astral Burgers · Buenos Aires</p>
+      <p class="footer-love">Hecho con ★ y mucho queso</p>
+      <div class="footer-socials-bar">
+        <a href="#" id="footerSocialWsp" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
+        <a href="#" id="footerSocialIg" target="_blank" rel="noopener" aria-label="Instagram">📷</a>
+      </div>
+    </div>
 
-</section>
+  </footer>
 
+  <!-- ==================== CART FAB ==================== -->
+  <button class="cart-fab" id="cartFab" aria-label="Abrir carrito">
+    <span class="cart-fab-icon">🛒</span>
+    <span class="cart-fab-count" id="cartCount">0</span>
+  </button>
 
-<header>
+  <!-- ==================== CART MODAL ==================== -->
+  <div class="modal" id="cartModal" aria-hidden="true" role="dialog" aria-labelledby="cartModalTitle">
+    <div class="modal-overlay" data-close="cartModal"></div>
+    <div class="modal-panel modal-panel-cart">
+      <header class="modal-head">
+        <h3 id="cartModalTitle">TU PEDIDO</h3>
+        <button class="modal-close" data-close="cartModal" aria-label="Cerrar">✕</button>
+      </header>
 
-<div class="logo">
-🍔 ASTRAL <span>BURGERS</span>
-</div>
+      <div class="modal-body">
+        <ul class="cart-list" id="cartList"></ul>
+        <div class="cart-empty" id="cartEmpty">
+          <div class="cart-empty-icon">🍔</div>
+          <p>Tu carrito está vacío.</p>
+          <p class="cart-empty-sub">Sumá algunas burgers y volvé.</p>
+        </div>
+      </div>
 
-</header>
+      <footer class="modal-foot" id="cartFoot" hidden>
+        <div class="cart-total">
+          <span>Total</span>
+          <strong>$<span id="cartTotal">0</span></strong>
+        </div>
+        <div class="cart-actions">
+          <button class="btn btn-ghost-dark" id="btnVaciar">Vaciar</button>
+          <button class="btn btn-whatsapp" id="btnEnviar">
+            <span>Pedir por WhatsApp</span>
+            <span class="btn-arrow">→</span>
+          </button>
+        </div>
+      </footer>
+    </div>
+  </div>
 
+  <!-- ==================== INGREDIENTS MODAL ==================== -->
+  <div class="modal" id="ingrModal" aria-hidden="true" role="dialog" aria-labelledby="ingrTitle">
+    <div class="modal-overlay" data-close="ingrModal"></div>
+    <div class="modal-panel modal-panel-ingr">
+      <button class="modal-close modal-close-floating" data-close="ingrModal" aria-label="Cerrar">✕</button>
+      <div class="ingr-image-wrap">
+        <img id="ingrImage" alt="">
+        <div class="ingr-image-fallback" aria-hidden="true">🍔</div>
+      </div>
+      <div class="ingr-content">
+        <p class="eyebrow" id="ingrEyebrow">★ Detalles ★</p>
+        <h3 id="ingrTitle"></h3>
+        <p class="ingr-desc" id="ingrDesc"></p>
+        <div class="ingr-foot">
+          <span class="ingr-price">$<span id="ingrPrice">0</span></span>
+          <button class="btn btn-primary" id="ingrAddBtn">+ Agregar</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
-<section class="sobre">
+  <!-- ==================== TOAST ==================== -->
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-<h2>Sobre Nosotros</h2>
-
-<p>
-En Astral Burgers llevamos las hamburguesas a otro nivel con ingredientes
-frescos y combinaciones únicas.
-</p>
-
-</section>
-
-
-<!-- HAMBURGUESAS -->
-
-<section class="menu" id="hamburguesas">
-
-<h2>HAMBURGUESAS</h2>
-
-<div class="catalogo" id="catalogo"></div>
-
-</section>
-
-
-<!-- promos -->
-<section class="menu" id="promos">
-
-
-<h2>PROMOCIONES</h2>
-
-<div class="catalogo" id="promo"></div>
-
-</section>
-
-
-<!-- bebidas -->
-
-<section class="menu" id="bebidas">
-
-<h2>BEBIDAS</h2>
-
-<div class="catalogo" id="bebida"></div>
-
-</section>
-
-
-<!-- BOTON CARRITO -->
-
-<div class="botonCarrito" onclick="abrirCarrito()">
-
-🛒
-
-<span id="contador">0</span>
-
-</div>
-
-
-<!-- MODAL CARRITO -->
-
-<div class="modal" id="modalCarrito">
-
-<div class="modal-content">
-
-<h2>Tu Pedido</h2>
-
-<ul id="listaCarrito"></ul>
-
-<div class="total">
-Total: $<span id="total">0</span>
-</div>
-
-<button class="vaciar" onclick="vaciarCarrito()">
-Vaciar carrito
-</button>
-
-<button class="comprar" onclick="enviarPedido()">
-Finalizar pedido
-</button>
-
-<button class="cerrar" onclick="cerrarCarrito()">
-Cerrar
-</button>
-
-</div>
-
-</div>
-
-
-<!-- MODAL INGREDIENTES -->
-
-<div class="modal" id="modalIngredientes">
-
-<div class="modal-content">
-
-<h3 id="modalTitulo"></h3>
-
-<p id="modalTexto"></p>
-
-<img id="modalImagen">
-
-
-<button class="cerrar" onclick="cerrarIngredientes()">
-Cerrar
-</button>
-
-</div>
-
-</div>
-
-
-<script src="script.js"></script>
-
+  <script src="script.js"></script>
 </body>
 </html>
